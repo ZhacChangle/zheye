@@ -1,4 +1,8 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import {
+  createRouter,
+  createWebHistory,
+  createWebHashHistory
+} from 'vue-router'
 import Home from './views/Home.vue'
 import Login from './views/Login.vue'
 import ColumnDetail from './views/ColumnDetail.vue'
@@ -7,6 +11,8 @@ import CreatePost from './views/CreatePost.vue'
 import PostDetail from './views/PostDetail.vue'
 import store from './store'
 import axios from 'axios'
+// github pages 的仓库是二级子目录的时候 要使用 hash 模式 否则首页的 / 的路由找不到
+// const routerHistory = createWebHashHistory()
 const routerHistory = createWebHistory()
 const router = createRouter({
   history: routerHistory,
